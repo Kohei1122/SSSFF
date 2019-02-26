@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSSFF</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="logo"><%= image_tag '/logo.png' %></div>
+    <div class="category_navi">
+      <div class="header1">Categories</div>
+      <div class="header2">
+        <div class="header2-content">News</div>
+        <div class="header2-content">Mail Magazine</div>
+        <div class="header2-content">Degital Catalog</div>
+        <div class="header2-content">Menbership Agreement</div>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>
