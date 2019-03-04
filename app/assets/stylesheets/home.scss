@@ -1,10 +1,3 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-// ここからProgateコピー
-
 body {
   font-family: "Avenir Next";
 }
@@ -17,6 +10,7 @@ li {
   background-color: #008080;
   color: #fff;
   height: 90px;
+  border-radius:6px;
 }
 
 .header-logo {
@@ -28,6 +22,17 @@ li {
 .header-list li {
   float: left;
   padding: 33px 20px;
+}
+
+.header-list .log-in, .header-list .log-off{
+  float: right;
+  padding-right: 30px;
+}
+
+.header-list .log-off{
+  height: 90px;
+  padding: 0 ;
+  padding-right: 30px;
 }
 
 .main {
@@ -96,7 +101,6 @@ input, textarea{
 /* contact-submitのCSSを指定してください */
 .contact-submit{
   background:#dee7ec;
-  
 }
 
 .footer {
@@ -104,6 +108,7 @@ input, textarea{
   color: #fff;
   height: 150px;
   padding: 20px;
+  border-radius:6px;
 }
 
 .footer-logo {

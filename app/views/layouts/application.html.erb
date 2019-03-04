@@ -15,10 +15,20 @@
       <div class="header-logo"><i class="fas fa-align-justify"></i> SSSFF</div>
       <div class="header-list">
         <ul class="header-list">
-          <li><i class="fas fa-caret-down"></i> News</li>
-          <li><i class="fas fa-caret-down"></i> Mail Magazine</li>
-          <li><i class="fas fa-caret-down"></i> Degital Catalog</li>
-          <li><i class="fas fa-caret-down"></i> Menbership Agreement</li>
+          <li><i class="fas fa-caret-right"></i> News</li>
+          <!--<li><i class="fas fa-caret-right"></i> Mail Magazine</li>-->
+          <li><i class="fas fa-caret-right"></i> Degital Catalog</li>
+          <li><i class="fas fa-caret-right"></i> Menbership Agreement</li>
+          <% if @current_user%>
+           <li class="log-off">
+            <p>Current User:<%= @current_user.name %></p>
+            <p><i class="fas fa-sign-in-alt"></i><%= link_to(" Log-off","/logoff", :style=>"color:#FFFFFF;") %></p>
+           </li>
+          <% else %>
+           <li class="log-in">
+            <i class="fas fa-sign-in-alt"></i><%= link_to(" Log-in","/login_form", :style=>"color:#FFFFFF;") %>
+           </li>
+          <% end %>
         </ul>
       </div>
     </div>
