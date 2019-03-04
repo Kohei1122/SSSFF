@@ -1,15 +1,52 @@
-<br><br>
-<div class="service">
-    <div class="service-content">
-        <div><%= link_to("Housing", "/housing") %></div>
-        <div class="image"><%= image_tag '/housing.jpg', :width=>'auto', :height=>'80'%></div>
+<div class="main">
+  <div class="copy-container">
+    <h1>Seikatsu Support System for Foreigners<span>.</span></h1>
+    <h2>外国人向け生活サポートシステムです</h2>
+  </div>
+  
+  <div class="contents">
+    <h3 class="section-title">Service Contents</h3>
+    <div class="contents-item housing">
+      <!--<img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg">-->
+      <i class="fas fa-home fa-9x"></i>
+      <p><%= link_to("Housing", "/housing") %></p>
     </div>
-    <div class="service-content">
-        <div><%= link_to("Financial", "/financial") %></div>
-        <div class="image"><%= image_tag '/bank.jpg',:width=>'auto',:height=>'80'%></div>
+    <div class="contents-item financial">
+      <!--<img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/php.svg">-->
+      <i class="fas fa-yen-sign fa-9x"></i>
+      <p><%= link_to("Financial", "/financial") %></p>
     </div>
-    <div class="service-content">
-        <div><%= link_to("Medical", "/medical") %></div>
-        <div class="image"><%= image_tag '/hospital.png',:width=>'auto',:height=>'80'%></div>
+    <div class="contents-item medical">
+      <!--<img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/ruby.svg">-->
+      <i class="far fa-hospital fa-9x"></i>
+      <p><%= link_to("Medical", "/medical") %></p>
     </div>
+  </div>
+  
+  <div class="contact-form">
+    <h3 class="section-title">Inquiry</h3>
+    <p>Email Adess(Required)</p>
+    <!-- <input>要素を追加してください -->
+    <input>
+    
+    <p>Details(Required)</p>
+    <!-- <textarea>要素を追加してください -->
+    <textarea></textarea>
+    
+    <p>※Please fill always required fields</p>
+    <!-- <input>要素を追加してください -->
+    <input class="contact-submit" type="submit" value="Submit">
+    
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-logo">SSSFF</div>
+  <div class="footer-list">
+    <ul>
+      <li>About</li>
+      <li>Recruiting</li>
+      <li>Inquiry</li>
+    </ul>
+  </div>
 </div>
