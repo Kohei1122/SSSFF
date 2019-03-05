@@ -9,10 +9,10 @@ class UserController < ApplicationController
     @password = params[:password]
     if @user
       session[:user_id] = @user.id
-      flash[:notice] = "ログインに成功しました"
+      # flash[:notice] = "ログインに成功しました"
       redirect_to("/")
     else
-      flash[:notice] = "ログインに失敗しました"
+      # flash[:notice] = "ログインに失敗しました"
       render "user/login_form"
     end
   end
