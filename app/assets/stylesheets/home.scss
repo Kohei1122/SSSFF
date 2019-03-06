@@ -24,7 +24,7 @@ li {
   padding: 33px 20px;
 }
 
-.header-list .log-in, .header-list .log-off{
+.header-list .log-in, .header-list .create, .header-list .log-off{
   float: right;
   padding-right: 30px;
 }
@@ -38,7 +38,9 @@ li {
 .main {
   padding: 20px 20px;
   margin:20px;
-  background-image: url("/business.jpg");
+  // 背景画像
+  background-image: url("/earth.jpg");
+  background-size: 150%;
 }
 
 .copy-container{

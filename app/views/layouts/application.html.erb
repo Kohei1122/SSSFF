@@ -15,10 +15,12 @@
       <div class="header-logo"><i class="fas fa-align-justify"></i> SSSFF</div>
       <div class="header-list">
         <ul class="header-list">
-          <li><i class="fas fa-caret-right"></i> News</li>
+          <!--<li><i class="fas fa-caret-right"></i> News</li>-->
           <!--<li><i class="fas fa-caret-right"></i> Mail Magazine</li>-->
-          <li><i class="fas fa-caret-right"></i> Degital Catalog</li>
-          <li><i class="fas fa-caret-right"></i> Menbership Agreement</li>
+          <!--<li><i class="fas fa-caret-right"></i> Degital Catalog</li>-->
+          <!--<li><i class="fas fa-caret-right"></i> Menbership Agreement</li>-->
+          <li><i class="fas fa-caret-right"></i><%= link_to(" Home","/", :style=>"color:#FFFFFF;") %></li>
+          <li><i class="fas fa-caret-right"></i><%= link_to(" Users","/user/index", :style=>"color:#FFFFFF;") %></li>
           <% if @current_user%>
            <li class="log-off">
             <p>Current User:<%= @current_user.name %></p>
@@ -27,6 +29,9 @@
           <% else %>
            <li class="log-in">
             <i class="fas fa-sign-in-alt"></i><%= link_to(" Log-in","/login_form", :style=>"color:#FFFFFF;") %>
+           </li>
+           <li class="create">
+            <i class="far fa-hand-point-up"></i><%= link_to(" New","/create_form", :style=>"color:#FFFFFF;") %>
            </li>
           <% end %>
         </ul>

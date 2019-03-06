@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   post 'login' => 'user#login'
   get '/logoff' => 'user#logoff'
   
+  get '/create_form' => 'user#create_form'
+  post '/create' => 'user#create'
+  get 'user/index' => 'user#index'
+  get '/users/:id'=> 'user#show'
+  
 end
