@@ -1,0 +1,36 @@
+<div class="main facilities-index">
+  <div class="container">
+    <div class="facilities-heading"><h3>Service</h3></div>
+      <%= form_tag("/login") do %>
+        <div class="field">
+        <a style="font-weight:bold;">Category:</a>
+          <% %w(Housing Finance Medical).each.with_index do |service,i| %>
+          <label>
+          <%= check_box_tag 'samurai[ingredients][]', service,false,id:"service_#{i}", class:"service"%>
+          <%= service %>
+          </label>
+        <% end %>
+          <br><a style="font-weight:bold;">Place:</a>
+        <% %w(Shinjuku Shibuya Ebisu Roppongi).each.with_index do |service,i| %>
+          <label>
+          <%= check_box_tag 'samurai[ingredients][]', service,false,id:"service_#{i}", class:"service"%>
+          <%= service %>
+          </label>
+        <% end %>
+        <br><input type="Submit" value="Search" style="padding:3px; width:100px;">
+      <% end %>
+  </div>
+
+    <% @facilities.each do |facility| %>
+      <div class="facilities-index-item">
+        <div class="facility-left">
+          
+        </div>
+        <div class="facility-right">
+          <%= link_to(facility.name, "/facility/#{facility.id}") %>
+        </div>
+      </div>
+    <% end %>
+    
+  </div>
+</div>

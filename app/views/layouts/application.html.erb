@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SSSFF</title>
+    <title>3SFF</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,7 +12,7 @@
 
   <body>
     <div class="header">
-      <div class="header-logo"><i class="fas fa-align-justify"></i> SSSFF</div>
+      <div class="header-logo"><i class="fas fa-align-justify"></i> 3SFF</div>
       <div class="header-list">
         <ul class="header-list">
           <!--<li><i class="fas fa-caret-right"></i> News</li>-->
@@ -21,17 +21,21 @@
           <!--<li><i class="fas fa-caret-right"></i> Menbership Agreement</li>-->
           <li><i class="fas fa-caret-right"></i><%= link_to(" Home","/", :style=>"color:#FFFFFF;") %></li>
           <li><i class="fas fa-caret-right"></i><%= link_to(" Users","/user/index", :style=>"color:#FFFFFF;") %></li>
+          <li><i class="fas fa-caret-right"></i><%= link_to(" Service","/facility/index", :style=>"color:#FFFFFF;") %></li>
           <% if @current_user%>
            <li class="log-off">
             <p>Current User:<%= @current_user.name %></p>
-            <p><i class="fas fa-sign-in-alt"></i><%= link_to(" Log-off","/logoff", :style=>"color:#FFFFFF;") %></p>
+            <p><%= link_to("Log-off ","/logoff", :style=>"color:#FFFFFF;") %><i class="fas fa-sign-in-alt"></i></p>
+            <li class="register-facility">
+            <i class="fas fa-plus-circle"></i><%= link_to(" Add Service","/facility/create_form", :style=>"color:#FFFFFF;") %>
+           </li>
            </li>
           <% else %>
            <li class="log-in">
             <i class="fas fa-sign-in-alt"></i><%= link_to(" Log-in","/login_form", :style=>"color:#FFFFFF;") %>
            </li>
            <li class="create">
-            <i class="far fa-hand-point-up"></i><%= link_to(" New","/create_form", :style=>"color:#FFFFFF;") %>
+            <i class="fas fa-child"></i><%= link_to(" Sign-up","/create_form", :style=>"color:#FFFFFF;") %>
            </li>
           <% end %>
         </ul>
@@ -39,7 +43,7 @@
     </div>
     <%= yield %>
     <div class="footer">
-      <div class="footer-logo"><i class="fas fa-align-justify"></i> SSSFF</div>
+      <div class="footer-logo"><i class="fas fa-align-justify"></i> 3SFF</div>
       <div class="footer-list">
         <p><i class="fas fa-info-circle"></i> Infomation</p>
         <ul>

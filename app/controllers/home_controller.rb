@@ -6,10 +6,12 @@ class HomeController < ApplicationController
   def housing
   end
   
-  def financial
+  def finance
   end
   
   def medical
   end
+  
+  
   
 end
