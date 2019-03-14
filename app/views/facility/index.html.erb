@@ -1,7 +1,7 @@
 <div class="main facilities-index">
   <div class="container">
     <div class="facilities-heading"><h3>Service</h3></div>
-    <p>検索</p>
+    <p>Search</p>
     <%= form_tag("/facility/search",:method => 'get') do %>
       <%= text_field_tag :search %>
       <%= submit_tag 'Search', :name => nil %>
