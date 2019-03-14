@@ -20,7 +20,7 @@
           <!--<li><i class="fas fa-caret-right"></i> Degital Catalog</li>-->
           <!--<li><i class="fas fa-caret-right"></i> Menbership Agreement</li>-->
           <li><i class="fas fa-caret-right"></i><%= link_to(" Home","/", :style=>"color:#FFFFFF;") %></li>
-          <li><i class="fas fa-caret-right"></i><%= link_to(" Users","/user/index", :style=>"color:#FFFFFF;") %></li>
+          <li><i class="fas fa-caret-right"></i><% link_to(" Users","/user/index", :style=>"color:#FFFFFF;") %></li>
           <li><i class="fas fa-caret-right"></i><%= link_to(" Service","/facility/index", :style=>"color:#FFFFFF;") %></li>
           <% if @current_user%>
            <li class="log-off">
